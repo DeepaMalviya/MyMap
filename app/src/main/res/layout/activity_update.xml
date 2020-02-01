@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="activity.UpdateActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:navigationIcon="?homeAsUpIndicator"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageADDClient"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_logo" />
+
+        <EditText
+            android:id="@+id/textVieww"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/ractangle"
+            android:gravity="start"
+            android:hint="Enter Details here "
+            android:inputType="textLongMessage"
+            android:padding="10dp"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="Enter Name "
+            android:text=""
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/textViewContactNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="Enter Contact Number"
+            android:digits="0123456789"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/textViewEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+
+            android:hint="Enter Email (optional) "
+            android:lines="5"
+            android:singleLine="true"
+            android:text=""
+            android:textAlignment="textStart"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="5dp">
+
+        </Spinner>
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/checkboxOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="one" />
+
+            <CheckBox
+                android:id="@+id/checkboxTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="two" />
+
+            <CheckBox
+                android:id="@+id/checkboxThree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="three" />
+
+            <CheckBox
+                android:id="@+id/checkboxFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="four" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorPrimary"
+            android:onClick="updateSubmit"
+            android:text="Submit"
+            android:textColor="@color/white" />
+    </LinearLayout>
+</LinearLayout>
